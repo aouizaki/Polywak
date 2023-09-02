@@ -1,0 +1,244 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    height: 250vh;
+    background: url(image.png);
+    scroll-behavior: smooth;
+}
+header {
+    background-color: rgba(255, 255, 255, 0.062); /* Transparent white background */
+    backdrop-filter: blur(1px); /* Adds a blur effect to the background */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgb(1, 15, 61);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.nav-links a#home {
+    background-color: rgb(10, 110, 192);
+    padding: 10px 15px;
+    border-radius: 17px;
+}
+.nav-links a#home:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 10px 15px;
+    border-radius: 17px;
+}
+
+.nav-links a:hover {
+    color: #0474be;
+    transition: .8s;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #06011a;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex;
+        width: 100px;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+.text {
+    width: 100%;
+    text-align: center;
+}
+.text h1 {
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 60%;
+    left: 50%;
+    color: white;
+}
+.text img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin-top: 100px;
+}
+.all {
+    width: 100%;
+    text-align: center;
+}
+.content{
+    width: 80%;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    margin-top: 90px;
+    box-shadow: 0 0 20px rgba(57, 127, 184, 0.226);
+}
+.content h4 {
+    font-family: sans-serif;
+    color: white;
+    line-height: 35px;
+    font-size: 30px;
+    text-shadow: 0 0 15px rgb(1, 1, 68);
+}
+.content img {
+    width: 250px;
+    height: 250px;
+    padding: 10px 20px ;
+}
+
+footer {
+    margin-top: 180px;
+    background-color: #02011a; /* Set the background color for the footer */
+    color: #fff; /* Set the text color to white */
+    text-align: center; /* Center-align the content */
+    padding: 20px 0; /* Add some padding for spacing */
+}
+
+/* Style the copyright text */
+footer .copyright {
+    letter-spacing: 2px;
+    font-size: 14px; /* Adjust the font size as needed */
+}
+
+/* Add some margin to the copyright text for spacing */
+footer .copyright h5 {
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #010827;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive styles for phones */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    h4 {
+        padding: 10px 10px;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        background-color: #010625;
+        border-radius: 15px;
+        z-index: 1;
+        width: 100%;
+        top: 60px;
+        left: 0;
+    }
+    .content {
+        display: inline-block;
+    }
+    .nav-links.active {
+        display: flex;
+        margin: 25px;
+        box-shadow: 0 0 15px rgb(128, 127, 127);
+        transition: 5s;
+        margin-left: auto;
+    }
+
+    /* Add styles for the hamburger menu icon here */
+
+    .text h1 {
+        font-size: 24px; /* Adjust the font size for smaller screens */
+        margin-top: 20px; /* Increase the top margin for spacing */
+    }
+
+    .all {
+        flex-direction: column;
+    }
+
+    .content {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    footer {
+        text-align: center;
+    }
+    .container{
+        height: 310vh;
+    }
+}
